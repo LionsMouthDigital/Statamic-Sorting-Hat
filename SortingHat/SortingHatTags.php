@@ -7,7 +7,7 @@ use Statamic\Addons\SortingHat\Helpers as SortingHat;
 use Statamic\Extend\Tags;
 
 /**
- * Anters tags for The Sorting Hat.
+ * Antlers tags for The Sorting Hat.
  */
 class SortingHatTags extends Tags
 {

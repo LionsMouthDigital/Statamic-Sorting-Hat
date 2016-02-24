@@ -2,11 +2,13 @@
 
 namespace Statamic\Addons\SortingHat;
 
-use Statamic\Extend\Addon;
-
 use Statamic\API\Roles;
 use Statamic\API\UserGroups;
+use Statamic\Extend\Addon;
 
+/**
+ * Auxiliary methods to keep code readable.
+ */
 class Helpers extends Addon
 {
     /**

@@ -5,6 +5,9 @@ namespace Statamic\Addons\SortingHat;
 use Statamic\API\UserGroups;
 use Statamic\Extend\Listener;
 
+/**
+ * Listener method for The Sorting Hat.
+ */
 class SortingHatListener extends Listener
 {
     /**
@@ -13,10 +16,17 @@ class SortingHatListener extends Listener
      * @var array
      */
     public $events = [
-        'user.registered' => 'register',
+        'user.registered' => 'sort',
     ];
 
-    public function register($user)
+    /**
+     * Sort a user into groups and roles based on a form submission.
+     *
+     * @author Curtis Blackwell
+     * @param  object $user \Statamic\API\User
+     * @return void
+     */
+    public function sort($user)
     {
         // Don't try to do anything if there's nothing to do.
         if (empty(array_get($_POST, 'sorting_hat'))) {
