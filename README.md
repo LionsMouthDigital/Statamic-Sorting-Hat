@@ -40,3 +40,7 @@ the registering user.
 
 ![User Role](examples/img/user.png)  
 *User*
+
+---
+
+[License](http://creativecommons.org/licenses/by-sa/4.0/)
