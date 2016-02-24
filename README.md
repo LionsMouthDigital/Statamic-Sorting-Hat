@@ -14,10 +14,10 @@ Pass in a slug or pipe-separated list of slugs corresponding to the group(s) or 
 the registering user.
 
 ## Example
-![User Group](examples/img/group.png)
+![User Group](examples/img/group.png)  
 *User Group*
 
-![Role](examples/img/role.png)
+![Role](examples/img/role.png)  
 *Role*
 
 
@@ -38,5 +38,5 @@ the registering user.
 {{ /user:register_form }}
 ```
 
-![User Role](examples/img/user.png)
+![User Role](examples/img/user.png)  
 *User*
