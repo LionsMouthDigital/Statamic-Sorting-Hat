@@ -1,0 +1,5 @@
+# In this example, the script removes a user file `test.yaml` if it exists. To use it, uncomment and
+# run `grunt shell:rmUser` or add `shell:rmUser` to another task.
+# See https://github.com/sindresorhus/grunt-shell for more options.
+# rmUser:
+#   command: 'if test -f "<%= m.global.sites_path %>/<%= m.site.dir %>/<%= m.site.root %>/site/users/test.yaml"; then rm <%= m.global.sites_path %>/<%= m.site.dir %>/<%= m.site.root %>/site/users/test.yaml; fi'

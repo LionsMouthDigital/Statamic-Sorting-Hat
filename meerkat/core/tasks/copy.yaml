@@ -1,0 +1,16 @@
+addon:
+  files:
+    - expand: true
+      cwd: '<%= m.addon.dir %>/'
+      src:
+        - '**/*.{php,json,yaml,js}'
+      dest: '<%= m.global.sites_path %>/<%= m.site.dir %>/<%= m.site.root %>/site/addons/<%= m.addon.dir %>/'
+
+
+settings:
+  files:
+    - expand: true
+      cwd: '<%= m.settingsPath %>'
+      src:
+        - '**'
+      dest: '<%= m.global.sites_path %>/<%= m.site.dir %>/<%= m.site.root %>/<%= m.settingsPath %>'

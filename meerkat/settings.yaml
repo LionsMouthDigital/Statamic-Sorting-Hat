@@ -1,0 +1,5 @@
+addon:
+  # The proper name of your addon (as you would display it in marketing).
+  name: The Sorting Hat
+  # The name of the dir that holds your addon.
+  dir: SortingHat

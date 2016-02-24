@@ -1,0 +1,16 @@
+addon:
+  options:
+    message: '<%= m.addon.name %> files copied.'
+
+
+settings:
+  options:
+    message: Settings files copied.
+
+
+
+
+notify_hooks:
+  options:
+    success: true
+    title: '<%= m.addon.name %>'
