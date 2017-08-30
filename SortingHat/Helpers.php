@@ -4,13 +4,15 @@ namespace Statamic\Addons\SortingHat;
 
 use Statamic\API\Roles;
 use Statamic\API\UserGroups;
-use Statamic\Extend\Addon;
+use Statamic\Extend\Extensible;
 
 /**
  * Auxiliary methods to keep code readable.
  */
-class Helpers extends Addon
+class Helpers
 {
+    use Extensible;
+
     /**
      * Get a Role ID from its slug.
      *

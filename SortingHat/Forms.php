@@ -2,13 +2,15 @@
 
 namespace Statamic\Addons\SortingHat;
 
-use Statamic\Extend\Addon;
+use Statamic\Extend\Extensible;
 
 /**
  * Anything and everything form-related belongs here.
  */
-class Forms extends Addon
+class Forms
 {
+    use Extensible;
+
     /**
      * Generate an input for use with The Sorting Hat.
      *
