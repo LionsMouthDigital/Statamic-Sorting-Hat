@@ -2,8 +2,8 @@
 
 namespace Statamic\Addons\SortingHat;
 
-use Statamic\API\Roles;
-use Statamic\API\UserGroups;
+use Statamic\API\Role;
+use Statamic\API\UserGroup;
 use Statamic\Extend\Extensible;
 
 /**
@@ -22,7 +22,7 @@ class Helpers
      */
     public static function getRoleId($roleSlug)
     {
-        return Roles::slug($roleSlug)->uuid();
+        return Role::whereHandle($roleSlug)->uuid();
     }
 
     /**
@@ -34,6 +34,6 @@ class Helpers
      */
     public static function getGroupId($groupSlug)
     {
-        return UserGroups::slug($groupSlug)->uuid();
+        return UserGroup::whereHandle($groupSlug)->uuid();
     }
 }

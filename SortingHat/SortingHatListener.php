@@ -2,7 +2,7 @@
 
 namespace Statamic\Addons\SortingHat;
 
-use Statamic\API\UserGroups;
+use Statamic\API\UserGroup;
 use Statamic\Extend\Listener;
 
 /**
@@ -38,7 +38,7 @@ class SortingHatListener extends Listener
 
         // Add the user to each of the specified groups.
         foreach ($groups as $group) {
-            $group = UserGroups::get($group);
+            $group = UserGroup::find($group);
             $group->addUser($user);
             $group->save();
         }
