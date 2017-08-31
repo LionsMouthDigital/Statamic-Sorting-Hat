@@ -5,7 +5,7 @@ namespace Statamic\Addons\SortingHat;
 use Statamic\Addons\SortingHat\Forms as SortingHatForms;
 use Statamic\Addons\SortingHat\Helpers as SortingHat;
 use Statamic\API\Parse;
-use Statamic\API\UserGroups;
+use Statamic\API\UserGroup;
 use Statamic\Extend\Tags;
 
 /**
@@ -13,6 +13,9 @@ use Statamic\Extend\Tags;
  */
 class SortingHatTags extends Tags
 {
+    /** @var SortingHatForms */
+    public $forms;
+
     /**
      * Pseudo-constructor.
      *
@@ -73,7 +76,7 @@ class SortingHatTags extends Tags
         $context    = $useContext ? $this->context : [];
 
         // Convert all user groups' data to Antlers array.
-        $userGroups = UserGroups::all();
+        $userGroups = UserGroup::all();
         foreach ($userGroups as &$userGroup) {
             $tags[] = $userGroup->toArray();
         }
@@ -102,8 +105,8 @@ class SortingHatTags extends Tags
         $context    = $useContext ? $this->context : [];
 
         $userGroup = isset($title)
-            ? UserGroups::get($title)
-            : UserGroups::slug($slug);
+            ? UserGroup::find($title)
+            : UserGroup::whereHandle($slug);
 
         // If not a tag pair, this should be a conditional. Check to see if
         // the specified group exists.
